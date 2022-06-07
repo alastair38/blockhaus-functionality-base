@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin name: Core Functionality
+Plugin name: Blockhaus Functionality
 Description: Custom fields and Gutenberg blocks
-Text Domain: blockface
+Text Domain: blockhaus
 */
 
 // Define path and URL to the ACF plugin.
@@ -74,7 +74,7 @@ if( function_exists('acf_add_local_field_group') ):
                     'class' => '',
                     'id' => '',
                 ),
-                'message' => '<img src="http://pentecost.local/wp-content/themes/blockhaus/screenshot.png" style="width: 100%; margin-bottom: 1rem; border-radius: 4px;" alt="Blockhaus logo" class="wp-image-578"/>The information that you set on the options page is available across the site to be used by any compatible theme. If you change your theme (but keep the functionality plugin enabled) this information will still be available, but your new theme will need to be slightly modified in order to display this information in areas such as the footer.
+                'message' => '<img src="/wp-content/themes/blockhaus/screenshot.png" style="width: 100%; margin-bottom: 1rem; border-radius: 4px;" alt="Blockhaus logo" class="wp-image-578"/>The information that you set on the options page is available across the site to be used by any compatible theme. If you change your theme (but keep the functionality plugin enabled) this information will still be available, but your new theme will need to be slightly modified in order to display this information in areas such as the footer.
     
                 For your convenience, this information can still be accessed using the custom address, phone and social media blocks that are bundled with the functionality plugin. This allows you to drop the information into any content item that supports the new Wordpress block editor.',
                 'new_lines' => 'wpautop',
