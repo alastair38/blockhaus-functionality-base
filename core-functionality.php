@@ -37,6 +37,84 @@ function my_acf_json_save_point( $path ) {
     
 }
 
+// Add options page
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme Options',
+		'menu_title'	=> 'Theme Options',
+		'menu_slug' 	=> 'theme-options',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url' => 'dashicons-admin-generic',
+		'update_button' => __('Update Theme Options', 'acf'),
+	));
+
+}
+
+/* Register the Overview message for the top of the Theme Options page  */
+
+if( function_exists('acf_add_local_field_group') ):
+
+    acf_add_local_field_group(array(
+        'key' => 'group_6299dedce59b7',
+        'title' => 'Overview',
+        'fields' => array(
+            array(
+                'key' => 'field_6299deeb40c2d',
+                'label' => '',
+                'name' => '',
+                'type' => 'message',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'message' => '<img src="http://pentecost.local/wp-content/themes/blockhaus/screenshot.png" style="width: 100%; margin-bottom: 1rem; border-radius: 4px;" alt="Blockhaus logo" class="wp-image-578"/>The information that you set on the options page is available across the site to be used by any compatible theme. If you change your theme (but keep the functionality plugin enabled) this information will still be available, but your new theme will need to be slightly modified in order to display this information in areas such as the footer.
+    
+                For your convenience, this information can still be accessed using the custom address, phone and social media blocks that are bundled with the functionality plugin. This allows you to drop the information into any content item that supports the new Wordpress block editor.',
+                'new_lines' => 'wpautop',
+                'esc_html' => 0,
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'options_page',
+                    'operator' => '==',
+                    'value' => 'theme-options',
+                ),
+            ),
+        ),
+        'menu_order' => -1,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+        'show_in_rest' => 0,
+    ));
+    
+endif;		
+
+// Include file to register ACF SEO fields
+
+include( plugin_dir_path( __FILE__ ) . 'includes/fields/seo.php');
+
+// Include file to register ACF Social Media Profile fields
+
+include( plugin_dir_path( __FILE__ ) . 'includes/fields/social-media.php');
+
+// Include file to register ACF Contact details fields
+
+include( plugin_dir_path( __FILE__ ) . 'includes/fields/contact.php');
+
 // Include file to register ACF gutenberg blocks
 
 include( plugin_dir_path( __FILE__ ) . 'includes/blocks/register-blocks.php');
