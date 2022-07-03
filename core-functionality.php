@@ -74,7 +74,7 @@ if( function_exists('acf_add_local_field_group') ):
                     'class' => '',
                     'id' => '',
                 ),
-                'message' => '<img src="/wp-content/themes/blockhaus/screenshot.png" style="width: 100%; margin-bottom: 1rem; border-radius: 4px;" alt="Blockhaus logo" class="wp-image-578"/>The information that you set on the options page is available across the site to be used by any compatible theme. If you change your theme (but keep the functionality plugin enabled) this information will still be available, but your new theme will need to be slightly modified in order to display this information in areas such as the footer.
+                'message' => 'The information that you set on the options page is available across the site to be used by any compatible theme. If you change your theme (but keep the functionality plugin enabled) this information will still be available, but your new theme will need to be slightly modified in order to display this information in areas such as the footer.
     
                 For your convenience, this information can still be accessed using the custom address, phone and social media blocks that are bundled with the functionality plugin. This allows you to drop the information into any content item that supports the new Wordpress block editor.',
                 'new_lines' => 'wpautop',
@@ -103,6 +103,14 @@ if( function_exists('acf_add_local_field_group') ):
     
 endif;		
 
+// Include file to register ACF fields for registered blocks
+
+include( plugin_dir_path( __FILE__ ) . 'includes/fields/blocks.php');
+
+// Include file to register ACF content fields for post type editing options
+
+include( plugin_dir_path( __FILE__ ) . 'includes/fields/content.php');
+
 // Include file to register ACF SEO fields
 
 include( plugin_dir_path( __FILE__ ) . 'includes/fields/seo.php');
@@ -115,6 +123,18 @@ include( plugin_dir_path( __FILE__ ) . 'includes/fields/social-media.php');
 
 include( plugin_dir_path( __FILE__ ) . 'includes/fields/contact.php');
 
+// Include file to register ACF Privacy fields
+
+include( plugin_dir_path( __FILE__ ) . 'includes/fields/privacy.php');
+
+// Include file to register ACF Funders fields
+
+include( plugin_dir_path( __FILE__ ) . 'includes/fields/funders.php');
+
 // Include file to register ACF gutenberg blocks
 
 include( plugin_dir_path( __FILE__ ) . 'includes/blocks/register-blocks.php');
+
+// Include file to register Block Patterns
+
+include( plugin_dir_path( __FILE__ ) . 'includes/blocks/block-patterns.php');

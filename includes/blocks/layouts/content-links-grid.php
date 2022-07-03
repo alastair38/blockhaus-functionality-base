@@ -26,6 +26,12 @@ if( !empty($block['align']) ) {
 
 // Load values and assing defaults.
 $links = get_field('content_links');
+$links_copy = get_field('content_links_copy');
+
+// var_dump($links);
+
+if($links): 
+
 $count = count($links);
 if($count === 1) {
   $cols = 'md:grid-cols-1';
@@ -34,15 +40,17 @@ if($count === 1) {
   $cols = 'md:grid-cols-2';
   $img_size = 'thumbnail';
 }
+
+endif;
 ?>
 
-<aside id="<?php echo $id;?>" class="grid <?php echo $cols;?> gap-6 md:bg-gray-100 rounded-md md:p-6">
+<aside id="<?php echo $id;?>" class="grid <?php echo $cols;?> gap-6 md:bg-neutral-light-100 rounded-md md:p-6">
   
 <?php if($links) {
   
   foreach($links as $link) {
   
-  $img = get_the_post_thumbnail($link->ID, $img_size, array( 'class' => 'w-full md:w-auto' ));
+  $img = get_the_post_thumbnail($link->ID, $img_size, array( 'class' => 'w-full object-cover aspect-video md:aspect-auto md:w-auto bg-accent' ));
 
   if($img) {
 
@@ -67,7 +75,7 @@ if($count === 1) {
     </a>
   <?php } else {?>
     
-    <a class="flex flex-col md:flex-row group items-center bg-gray-100 md:bg-white rounded-md overflow-hidden" href="<?php echo get_the_permalink($link->ID);?>">
+    <a class="flex flex-col md:flex-row group items-center bg-gray-100 md:bg-white rounded-md overflow-hidden" href="<?php echo get_the_permalink($link->ID);?>" rel="bookmark" aria-label="Read <?php echo get_the_title($link->ID);?>">
       <?php if($img) {
         echo $img;
       } else {
