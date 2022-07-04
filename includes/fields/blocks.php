@@ -41,31 +41,6 @@ if( function_exists('acf_add_local_field_group') ):
         'return_format' => 'object',
         'ui' => 1,
       ),
-      array(
-        'key' => 'field_62a3494e38f2a',
-        'label' => 'Select Content Items (copy)',
-        'name' => 'content_links_copy',
-        'type' => 'post_object',
-        'instructions' => '',
-        'required' => 0,
-        'conditional_logic' => 0,
-        'wrapper' => array(
-          'width' => '',
-          'class' => '',
-          'id' => '',
-        ),
-        'post_type' => array(
-          0 => 'page',
-          1 => 'story',
-          2 => 'project',
-          3 => 'post',
-        ),
-        'taxonomy' => '',
-        'allow_null' => 0,
-        'multiple' => 1,
-        'return_format' => 'object',
-        'ui' => 1,
-      ),
     ),
     'location' => array(
       array(
