@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin name: Blockhaus Functionality
+Plugin name: Trajectories Functionality
 Description: Custom fields and Gutenberg blocks
 Text Domain: blockhaus
 */
