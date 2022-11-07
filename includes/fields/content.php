@@ -31,6 +31,33 @@ if( function_exists('acf_add_local_field_group') ):
         'ui_on_text' => '',
         'ui_off_text' => '',
       ),
+      array(
+        'key' => 'field_62c6ba063be46',
+        'label' => 'Background color',
+        'name' => 'choose_background',
+        'type' => 'radio',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => 'color-switcher',
+          'id' => '',
+        ),
+        'choices' => array(
+          'accent' => 'accent',
+          'offset' => 'offset',
+          'highlight' => 'highlight',
+          'accent-secondary' => 'accent-secondary',
+          'accent-tertiary' => 'accent-tertiary',
+        ),
+        'allow_null' => 1,
+        'other_choice' => 0,
+        'default_value' => '',
+        'layout' => 'vertical',
+        'return_format' => 'value',
+        'save_other_choice' => 0,
+      ),
     ),
     'location' => array(
       array(

@@ -84,7 +84,6 @@ acf_register_block_type(array(
   'keywords'          => array( 'link', 'links' ),
 ));
 
-
 }
 
 // Check if function exists and hook into setup.
