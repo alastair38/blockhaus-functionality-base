@@ -166,7 +166,7 @@ function blockhaus_acf_add_seo_field_groups() {
             'id' => '',
           ),
           'choices' => array(
-            'accent' => 'accent',
+            'accent-quarter' => 'accent-quarter',
             'offset' => 'offset',
             'highlight' => 'highlight',
             'accent-secondary' => 'accent-secondary',
@@ -272,7 +272,7 @@ function blockhaus_acf_add_seo_field_groups() {
             'id' => '',
           ),
           'choices' => array(
-            'accent' => 'accent',
+            'accent-quarter' => 'accent-quarter',
             'offset' => 'offset',
             'highlight' => 'highlight',
             'accent-secondary' => 'accent-secondary',
@@ -378,7 +378,7 @@ function blockhaus_acf_add_seo_field_groups() {
             'id' => '',
           ),
           'choices' => array(
-            'accent' => 'accent',
+            'accent-quarter' => 'accent-quarter',
             'offset' => 'offset',
             'highlight' => 'highlight',
             'accent-secondary' => 'accent-secondary',
@@ -484,7 +484,7 @@ function blockhaus_acf_add_seo_field_groups() {
           'id' => '',
         ),
         'choices' => array(
-          'accent' => 'accent',
+          'accent-quarter' => 'accent-quarter',
           'offset' => 'offset',
           'highlight' => 'highlight',
           'accent-secondary' => 'accent-secondary',
@@ -590,7 +590,7 @@ function blockhaus_acf_add_seo_field_groups() {
           'id' => '',
         ),
         'choices' => array(
-          'accent' => 'accent',
+          'accent-quarter' => 'accent-quarter',
           'offset' => 'offset',
           'highlight' => 'highlight',
           'accent-secondary' => 'accent-secondary',
@@ -677,7 +677,7 @@ function blockhaus_acf_add_seo_field_groups() {
           'id' => '',
         ),
         'choices' => array(
-          'accent' => 'accent-default',
+          'accent-quarter' => 'accent-quarter',
           'offset' => 'offset',
           'highlight' => 'highlight',
           'accent-secondary' => 'accent-secondary',
