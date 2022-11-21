@@ -14,10 +14,9 @@ if( function_exists('acf_add_local_field_group') ):
     'fields' => array(
       array(
         'key' => 'field_62b1e2d7fc282',
-        'label' => 'Use transparent image layout',
-        'name' => 'transparent_image_layout',
+        'label' => 'Use featured image as header background',
+        'name' => 'background_image_layout',
         'type' => 'true_false',
-        'instructions' => 'Turn this on if you are using a transparent image / graphic as the header for this page. This will offset the image to the right of the title and show the background colour through the image transparency.',
         'required' => 0,
         'conditional_logic' => 0,
         'wrapper' => array(
