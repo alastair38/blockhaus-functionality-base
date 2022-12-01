@@ -1,0 +1,64 @@
+{
+    "key": "group_637f8c9348241",
+    "title": "User profile",
+    "fields": [
+        {
+            "key": "field_637f8c9315b4c",
+            "label": "Select user",
+            "name": "select_user",
+            "aria-label": "",
+            "type": "user",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "role": "",
+            "return_format": "array",
+            "multiple": 0,
+            "allow_null": 0
+        },
+        {
+            "key": "field_637f8cda15b4d",
+            "label": "Layout",
+            "name": "layout",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "Vertical",
+            "ui_off_text": "Horizontal",
+            "ui": 1
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "blockhaus\/profile"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1669303801
+}

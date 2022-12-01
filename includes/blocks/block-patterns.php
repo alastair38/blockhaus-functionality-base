@@ -29,7 +29,7 @@ function blockhaus_register_patterns() {
         'categories'    => [
           'header',
         ],
-        'content'     => '<!-- wp:group {"tagName":"section","className":"grid grid-cols-1 md:grid-cols-hero place-items-center w-4/5 py-20 mx-auto","layout":{"inherit":true}} -->
+        'content'     => '<!-- wp:group {"templateLock": "contentOnly", "tagName":"section","className":"grid grid-cols-1 md:grid-cols-hero place-items-center w-4/5 py-20 mx-auto","layout":{"inherit":true}} -->
         <section class="wp-block-group grid grid-cols-1 md:grid-cols-hero place-items-center w-4/5 py-20 mx-auto"><!-- wp:image {"id":578,"sizeSlug":"landscape","linkDestination":"none","className":"md:col-span-2 md:col-start-1 md:row-start-1 size-landscape aspect-video rounded-md p-2 -rotate-2 z-0 image"} -->
         <figure class="wp-block-image md:col-span-2 md:col-start-1 md:row-start-1 size-landscape aspect-video rounded-md p-2 -rotate-2 z-0 image"><img src="/wp-content/themes/blockhaus/assets/images/block-patterns/hero-header.jpg" alt="A woman sits in a doorway looking at her laptop" class="wp-image-578"/></figure>
         <!-- /wp:image -->
@@ -122,31 +122,28 @@ function blockhaus_register_patterns() {
 ); 
 
  register_block_pattern(
-  'blockhaus/cta-with-video',
+  'blockhaus/cta',
   array(
       'title'       => __( 'Call to Action', 'blockhaus' ),
       'categories'    => [
         'callouts-and-quotes',
       ],
-      'content'     => '
-      <!-- wp:group {"tagName":"section","align":"full","className":"blockhaus-cta bg-accent slanted z-0 relative overflow-hidden"} -->
-      <section class="wp-block-group alignfull blockhaus-cta bg-accent slanted z-0 relative overflow-hidden"><!-- wp:heading {"textAlign":"center","style":{"typography":{"fontStyle":"normal","fontWeight":"900"}},"fontSize":"gigantic"} -->
-      <h2 class="has-text-align-center has-gigantic-font-size" style="font-style:normal;font-weight:900">What is YPAG?</h2>
-      <!-- /wp:heading -->
-      
-      <!-- wp:paragraph {"align":"center","className":"w-3/4 mx-auto"} -->
-      <p class="has-text-align-center w-3/4 mx-auto">The NeurOX Young People’s Advisory Group (YPAG) are young co-researchers currently aged 16-19 years involved in mental health and ethics research.</p>
-      <!-- /wp:paragraph -->
-      
-      <!-- wp:image {"id":1108,"width":711,"height":711,"sizeSlug":"full","linkDestination":"none","className":"mx-auto flex justify-center flex-col items-center w-3/4"} -->
-      <figure class="wp-block-image size-full is-resized mx-auto flex justify-center flex-col items-center w-3/4"><img src="http://ypag.local/wp-content/uploads/2022/06/infographic_normalized-1.svg" alt="" class="wp-image-1108" width="711" height="711"/></figure>
+      'content'     => '<!-- wp:group {"templateLock": "contentOnly", "tagName":"section","style":{"spacing":{"blockGap":"0px"}},"className":"grid grid-hero place-items-center","layout":{"inherit":false}} -->
+      <section class="wp-block-group grid grid-hero place-items-center"><!-- wp:image {"id":1350,"sizeSlug":"full","linkDestination":"none","className":"col-span-full col-start-1 row-start-1 z-0 image"} -->
+      <figure class="wp-block-image size-full col-span-full col-start-1 row-start-1 z-0 image"><img src="http://blockhaus.local/wp-content/uploads/2022/06/michael-schofield-IhuzPxyBunQ-unsplash.jpg" alt="" class="wp-image-1350"/></figure>
       <!-- /wp:image -->
       
-      <!-- wp:buttons -->
-      <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary-default","align":"center","className":"is-style-button-retro"} -->
-      <div class="wp-block-button aligncenter is-style-button-retro"><a class="wp-block-button__link has-primary-default-background-color has-background" href="http://ypag.local/about/">Find out more</a></div>
-      <!-- /wp:button --></div>
-      <!-- /wp:buttons --></section>
+      <!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"backgroundColor":"light-opacity","className":"hero-content backdrop-blur col-span-full md:col-span-2 col-start-1 row-start-1 md:col-start-2 md:row-start-1 space-y-2 lg:space-y-6 p-6 self-center z-10","layout":{"inherit":false}} -->
+      <div class="wp-block-group hero-content backdrop-blur col-span-full md:col-span-2 col-start-1 row-start-1 md:col-start-2 md:row-start-1 space-y-2 lg:space-y-6 p-6 self-center z-10 has-light-opacity-background-color has-background"><!-- wp:heading {"level":1,"className":"heading font-black leading-10","fontSize":"gigantic"} -->
+      <h1 class="heading font-black leading-10 has-gigantic-font-size">Trajectories</h1>
+      <!-- /wp:heading -->
+      
+      <!-- wp:paragraph {"className":"paragraph"} -->
+      <p class="paragraph">The social science of developmental pathways to health from preconception to childhood in South Africa</p>
+      <!-- /wp:paragraph --></div>
+      <!-- /wp:group -->
+      
+      <!-- wp:blockhaus/curved-separator {"name":"blockhaus/curved-separator","data":{},"mode":"preview","textColor":"neutral-light-100"} /--></section>
       <!-- /wp:group -->
       ',
   )
@@ -185,9 +182,9 @@ function blockhaus_register_patterns() {
       'content' => '
       <!-- wp:group {"tagName":"section","align":"full","style":{"spacing":{"blockGap":"0px"}},"className":"blockhaus-blog-posts has-accent-background-color has-background slanted z-0 relative overflow-hidden","layout":{"inherit":false}} -->
       <section class="wp-block-group alignfull blockhaus-blog-posts has-accent-background-color has-background slanted z-0 relative overflow-hidden" id="latest-posts"><!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"className":"grid gap-6 md:w-4/5 md:mx-auto"} -->
-      <div class="wp-block-group grid gap-6 md:w-4/5 md:mx-auto"><!-- wp:group {"backgroundColor":"secondary","textColor":"primary-default","className":"rounded-md col-span-full md:col-span-1 md:col-start-1 p-6 flex flex-col justify-between"} -->
-      <div class="wp-block-group rounded-md col-span-full md:col-span-1 md:col-start-1 p-6 flex flex-col justify-between has-primary-default-color has-secondary-background-color has-text-color has-background"><!-- wp:heading {"textColor":"primary-default","className":"font-black","fontSize":"gigantic"} -->
-      <h2 class="font-black has-primary-default-color has-text-color has-gigantic-font-size">Blog</h2>
+      <div class="wp-block-group grid gap-6 md:w-4/5 md:mx-auto"><!-- wp:group {"backgroundColor":"secondary","textColor":"primary","className":"rounded-md col-span-full md:col-span-1 md:col-start-1 p-6 flex flex-col justify-between"} -->
+      <div class="wp-block-group rounded-md col-span-full md:col-span-1 md:col-start-1 p-6 flex flex-col justify-between has-primary-color has-secondary-background-color has-text-color has-background"><!-- wp:heading {"textColor":"primary","className":"font-black","fontSize":"gigantic"} -->
+      <h2 class="font-black has-primary-color has-text-color has-gigantic-font-size">Blog</h2>
       <!-- /wp:heading -->
 
       <!-- wp:paragraph -->

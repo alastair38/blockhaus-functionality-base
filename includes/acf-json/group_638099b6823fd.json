@@ -1,0 +1,75 @@
+{
+    "key": "group_638099b6823fd",
+    "title": "Branding",
+    "fields": [
+        {
+            "key": "field_638099b6bf766",
+            "label": "Default social media sharing image",
+            "name": "social_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Set the default image that will be used for social media sharing of content if a featured image is has not been set (for that piece of content).",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_63809ab5ade10",
+            "label": "Default featured image",
+            "name": "featured_image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Set the default image that will be used on listing pages if a piece of content's featured image is has not been set.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1669373274
+}

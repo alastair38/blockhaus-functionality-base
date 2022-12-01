@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin name: Trajectories Functionality
+Plugin name: Blockhaus Base Functionality
 Description: Custom fields and Gutenberg blocks
 Text Domain: blockhaus
 */
@@ -109,27 +109,27 @@ include( plugin_dir_path( __FILE__ ) . 'includes/fields/blocks.php');
 
 // Include file to register ACF content fields for post type editing options
 
-include( plugin_dir_path( __FILE__ ) . 'includes/fields/content.php');
+// include( plugin_dir_path( __FILE__ ) . 'includes/fields/content.php');
 
 // Include file to register ACF SEO fields
 
-include( plugin_dir_path( __FILE__ ) . 'includes/fields/seo.php');
+//include( plugin_dir_path( __FILE__ ) . 'includes/fields/seo.php');
 
 // Include file to register ACF Social Media Profile fields
 
-include( plugin_dir_path( __FILE__ ) . 'includes/fields/social-media.php');
+//include( plugin_dir_path( __FILE__ ) . 'includes/fields/social-media.php');
 
 // Include file to register ACF Contact details fields
 
-include( plugin_dir_path( __FILE__ ) . 'includes/fields/contact.php');
+//include( plugin_dir_path( __FILE__ ) . 'includes/fields/contact.php');
 
 // Include file to register ACF Privacy fields
 
-include( plugin_dir_path( __FILE__ ) . 'includes/fields/privacy.php');
+// include( plugin_dir_path( __FILE__ ) . 'includes/fields/privacy.php');
 
 // Include file to register ACF Funders fields
 
-include( plugin_dir_path( __FILE__ ) . 'includes/fields/funders.php');
+// include( plugin_dir_path( __FILE__ ) . 'includes/fields/funders.php');
 
 // Include file to register ACF gutenberg blocks
 
@@ -138,3 +138,35 @@ include( plugin_dir_path( __FILE__ ) . 'includes/blocks/register-blocks.php');
 // Include file to register Block Patterns
 
 include( plugin_dir_path( __FILE__ ) . 'includes/blocks/block-patterns.php');
+
+/**
+ * Load Blocks
+ */
+function blockhaus_load_blocks() {
+    register_block_type( plugin_dir_path( __FILE__ ) . '/includes/blocks/archive-links/block.json' );
+	register_block_type( plugin_dir_path( __FILE__ ) . '/includes/blocks/curved-separator/block.json' );
+    register_block_type( plugin_dir_path( __FILE__ ) . '/includes/blocks/profile/block.json' );
+
+}
+add_action( 'init', 'blockhaus_load_blocks' );
+
+/**
+ * Adding a new (custom) block category.
+ *
+ * @param   array $block_categories                         Array of categories for block types.
+ */
+function blockhaus_add_new_block_category( $block_categories ) {
+	
+	return array_merge(
+		$block_categories,
+		[
+			[
+				'slug'  => 'blockhaus',
+				'title' => esc_html__( 'Blockhaus', 'blockhaus' ),
+				'icon'  => 'schedule', // Slug of a WordPress Dashicon or custom SVG
+			],
+		]
+	);
+}
+
+add_filter( 'block_categories_all', 'blockhaus_add_new_block_category' );
