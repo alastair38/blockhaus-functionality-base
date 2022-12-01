@@ -107,33 +107,6 @@ endif;
 
 include( plugin_dir_path( __FILE__ ) . 'includes/fields/blocks.php');
 
-// Include file to register ACF content fields for post type editing options
-
-// include( plugin_dir_path( __FILE__ ) . 'includes/fields/content.php');
-
-// Include file to register ACF SEO fields
-
-//include( plugin_dir_path( __FILE__ ) . 'includes/fields/seo.php');
-
-// Include file to register ACF Social Media Profile fields
-
-//include( plugin_dir_path( __FILE__ ) . 'includes/fields/social-media.php');
-
-// Include file to register ACF Contact details fields
-
-//include( plugin_dir_path( __FILE__ ) . 'includes/fields/contact.php');
-
-// Include file to register ACF Privacy fields
-
-// include( plugin_dir_path( __FILE__ ) . 'includes/fields/privacy.php');
-
-// Include file to register ACF Funders fields
-
-// include( plugin_dir_path( __FILE__ ) . 'includes/fields/funders.php');
-
-// Include file to register ACF gutenberg blocks
-
-include( plugin_dir_path( __FILE__ ) . 'includes/blocks/register-blocks.php');
 
 // Include file to register Block Patterns
 

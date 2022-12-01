@@ -47,79 +47,6 @@ function blockhaus_register_patterns() {
     )
 );
 
-  register_block_pattern(
-     'blockhaus/profile-block',
-     array(
-         'title'       => __( 'Profile Block - Image Left', 'blockhaus' ),
-         'categories'    => [
-          'users',
-        ],
-         'content'     => '<!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"className":"blockhaus-profile flex-col md:flex-row flex gap-0 md:gap-12 py-6"} -->
-         <div class="wp-block-group blockhaus-profile flex-col md:flex-row flex gap-0 md:gap-12 py-6"><!-- wp:image {"id":458,"sizeSlug":"profile","linkDestination":"none","className":"aspect-square min-w-fit max-w-fit"} -->
-         <figure class="wp-block-image size-profile aspect-square min-w-fit max-w-fit"><img src="http://ypag.local/wp-content/uploads/2022/05/janko-ferlic-1nizzZ-SFw4-unsplash-3-300x300.jpg" alt="" class="wp-image-458"/></figure>
-         <!-- /wp:image -->
-         
-         <!-- wp:group {"className":"self-start md:self-center mt-0 md:mt-auto py-6 md:p-0 space-y-6"} -->
-         <div class="wp-block-group self-start md:self-center mt-0 md:mt-auto py-6 md:p-0 space-y-6"><!-- wp:heading {"className":"font-bold"} -->
-         <h2 class="font-bold">Your name</h2>
-         <!-- /wp:heading -->
-         
-         <!-- wp:paragraph -->
-         <p>Age:</p>
-         <!-- /wp:paragraph -->
-         
-         <!-- wp:paragraph -->
-         <p>Why I joined YPAG:</p>
-         <!-- /wp:paragraph -->
-         
-         <!-- wp:paragraph -->
-         <p>What I have gained from YPAG:</p>
-         <!-- /wp:paragraph -->
-         
-         <!-- wp:paragraph -->
-         <p>Fun fact:</p>
-         <!-- /wp:paragraph --></div>
-         <!-- /wp:group --></div>
-         <!-- /wp:group -->',
-     )
- ); 
-
- register_block_pattern(
-  'blockhaus/profile-block-alternate',
-  array(
-      'title'       => __( 'Profile Block - Image Right', 'blockhaus' ),
-      'categories'    => [
-        'users',
-      ],
-      'content'     => '<!-- wp:group {"style":{"spacing":{"blockGap":"0px"}},"className":"blockhaus-profile-alt flex-col-reverse justify-between md:flex-row flex gap-0 md:gap-12 py-6"} -->
-      <div class="wp-block-group blockhaus-profile-alt flex-col-reverse justify-between md:flex-row flex gap-0 md:gap-12 py-6"><!-- wp:group {"className":"self-start md:self-center mt-0 md:mt-auto py-6 md:p-0 space-y-6"} -->
-      <div class="wp-block-group self-start md:self-center mt-0 md:mt-auto py-6 md:p-0 space-y-6"><!-- wp:heading {"className":"font-bold"} -->
-      <h2 class="font-bold">Your name</h2>
-      <!-- /wp:heading -->
-      
-      <!-- wp:paragraph -->
-      <p>Age:</p>
-      <!-- /wp:paragraph -->
-      
-      <!-- wp:paragraph -->
-      <p>Why I joined YPAG:</p>
-      <!-- /wp:paragraph -->
-      
-      <!-- wp:paragraph -->
-      <p>What I have gained from YPAG:</p>
-      <!-- /wp:paragraph -->
-      
-      <!-- wp:paragraph -->
-      <p>Fun fact:</p>
-      <!-- /wp:paragraph --></div>
-      <!-- /wp:group -->
-      
-      <!-- wp:image {"id":458,"sizeSlug":"profile","linkDestination":"none","className":"aspect-square min-w-fit max-w-fit"} -->
-      <figure class="wp-block-image size-profile aspect-square min-w-fit max-w-fit"><img src="http://ypag.local/wp-content/uploads/2022/05/janko-ferlic-1nizzZ-SFw4-unsplash-3-300x300.jpg" alt="" class="wp-image-458"/></figure>
-      <!-- /wp:image --></div>
-      <!-- /wp:group -->',
-  )
-); 
 
  register_block_pattern(
   'blockhaus/cta',
@@ -296,21 +223,6 @@ function blockhaus_register_patterns() {
       ',
     )
     );
-
-    register_block_pattern(
-      'blockhaus/blockhaus-quote',
-      array(
-        'title'   => __('Blockhaus Quote', 'blockhaus'),
-        'categories'    => [
-          'callouts-and-quotes',
-        ],
-        'content' => '
-        <!-- wp:quote {"className":"blockhaus-quote relative bg-neutral-light-100 flex flex-col items-center text-center gap-2 px-20 py-16 rounded-md border-l-0 outline-4 outline-double outline-accent outline-offset-4 is-style-default","fontSize":"large"} -->
-        <blockquote class="wp-block-quote blockhaus-quote relative bg-neutral-light-100 flex flex-col items-center text-center gap-2 px-20 py-16 rounded-md border-l-0 outline-4 outline-double outline-accent outline-offset-4 is-style-default has-large-font-size"><p>The cure for boredom is curiosity. There is no cure for curiosity.</p><cite>Dorothy Parker</cite></blockquote>
-        <!-- /wp:quote -->
-        ',
-      )
-      );
 
       register_block_pattern(
         'blockhaus/blockhaus-quote-with-image',
