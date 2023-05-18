@@ -1,0 +1,28 @@
+{
+  "name": "blockhaus/categories-list-enhanced",
+  "title": "Categories List Enhanced",
+  "description": "",
+  "script": "",
+  "category": "blockhaus",
+  "icon": "screenoptions",
+  "apiVersion": 2,
+  "keywords": [],
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "render.php"
+  },
+  "styles": [],
+  "supports": {
+    "align": false,
+    "anchor": false,
+    "alignContent": false,
+    "color": {
+      "text": false,
+      "background": true,
+      "link": false
+    },
+    "alignText": false,
+    "fullHeight": false
+  },
+  "attributes": {}
+}

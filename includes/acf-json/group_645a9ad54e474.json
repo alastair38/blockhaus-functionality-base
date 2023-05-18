@@ -1,0 +1,43 @@
+{
+    "key": "group_645a9ad54e474",
+    "title": "Options overview",
+    "fields": [
+        {
+            "key": "field_645a9ad5c1a80",
+            "label": "",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "The information that you set on the options page is available across the site to be used by any compatible theme. If you change your theme (but keep the functionality plugin enabled) this information will still be available, but your new theme will need to be slightly modified in order to display this information in areas such as the footer.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "theme-options"
+            }
+        ]
+    ],
+    "menu_order": -1,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1683659510
+}

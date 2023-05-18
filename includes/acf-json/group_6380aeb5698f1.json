@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "You can add logos of funders etc related to your project. Click on ‘Add Funder’ to upload an image, set a name and add a link to the organisations website.",
+            "message": "You can add logos of funders etc related to your project. Click on ‘Add Funder’ to upload an image, set a name and add a link to the organisation's website.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -128,5 +128,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669378064
+    "modified": 1683659638
 }

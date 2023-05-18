@@ -26,16 +26,33 @@ function my_acf_settings_show_admin( $show_admin ) {
     return true;
 }
 
-define( 'MY_PLUGIN_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/includes/' ) );add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+define( 'MY_PLUGIN_DIR_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) . '/includes/' ) );
+
+
+add_filter('acf/settings/save_json', 'acf_json_save_point');
  
-function my_acf_json_save_point( $path ) {
+function acf_json_save_point( $path ) {
     
     // Update path
-    $path = MY_PLUGIN_DIR_PATH. '/acf-json';
+    $path = plugin_dir_path( __FILE__ ). 'includes/acf-json';
+    
     // Return path
     return $path;
     
 }
+
+add_filter('acf/settings/load_json', 'acf_json_load_point');
+ 
+function acf_json_load_point( $path ) {
+    
+    // Update path
+    $path = plugin_dir_path( __FILE__ ). 'includes/acf-json';
+    
+    // Return path
+    return $path;
+    
+}
+
 
 // Add options page
 
@@ -53,56 +70,6 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-/* Register the Overview message for the top of the Theme Options page  */
-
-if( function_exists('acf_add_local_field_group') ):
-
-    acf_add_local_field_group(array(
-        'key' => 'group_6299dedce59b7',
-        'title' => 'Overview',
-        'fields' => array(
-            array(
-                'key' => 'field_6299deeb40c2d',
-                'label' => '',
-                'name' => '',
-                'type' => 'message',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => array(
-                    'width' => '',
-                    'class' => '',
-                    'id' => '',
-                ),
-                'message' => 'The information that you set on the options page is available across the site to be used by any compatible theme. If you change your theme (but keep the functionality plugin enabled) this information will still be available, but your new theme will need to be slightly modified in order to display this information in areas such as the footer.
-    
-                For your convenience, this information can still be accessed using the custom address, phone and social media blocks that are bundled with the functionality plugin. This allows you to drop the information into any content item that supports the new Wordpress block editor.',
-                'new_lines' => 'wpautop',
-                'esc_html' => 0,
-            ),
-        ),
-        'location' => array(
-            array(
-                array(
-                    'param' => 'options_page',
-                    'operator' => '==',
-                    'value' => 'theme-options',
-                ),
-            ),
-        ),
-        'menu_order' => -1,
-        'position' => 'normal',
-        'style' => 'default',
-        'label_placement' => 'top',
-        'instruction_placement' => 'label',
-        'hide_on_screen' => '',
-        'active' => true,
-        'description' => '',
-        'show_in_rest' => 0,
-    ));
-    
-endif;		
-
 // Include file to register ACF fields for registered blocks
 
 include( plugin_dir_path( __FILE__ ) . 'includes/fields/blocks.php');
@@ -117,6 +84,7 @@ include( plugin_dir_path( __FILE__ ) . 'includes/blocks/block-patterns.php');
  */
 function blockhaus_load_blocks() {
     register_block_type( plugin_dir_path( __FILE__ ) . '/includes/blocks/archive-links/block.json' );
+    register_block_type( plugin_dir_path( __FILE__ ) . '/includes/blocks/categories-list/block.json' );
 	register_block_type( plugin_dir_path( __FILE__ ) . '/includes/blocks/curved-separator/block.json' );
     register_block_type( plugin_dir_path( __FILE__ ) . '/includes/blocks/profile/block.json' );
 
